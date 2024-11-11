@@ -5,19 +5,19 @@ export const Hero = () => {
 
   const slides = [
     {
-      title: 'Paga en modo Contrapedido en todos tus pedidos ',
-      description: 'Desde la comodidad de tu casa ordena, y paga al recibir.',
-      buttonText: 'Ver Condiciones',
-      buttonLink: '#',
+      title: 'Feria de SmartHome este mes hasta 40% descuento ',
+      description: 'Ofertas en productos de inteligentes para su hogar.',
+      buttonText: 'Ver productos',
+      buttonLink: 'products?category=Tecnología&subcategory=SmartHouse',
       secondaryButtonText: 'Ver Productos',
       secondaryButtonLink: '#',
-      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/banner_mobile_1.png',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+1+main.jpg',
     },
     {
       title: 'Feria Gaming este weekend 50% de descuento',
       description: 'Aprovecha todos los productos gaming a mitad de precio.',
       buttonText: 'Ver Productos',
-      buttonLink: '#',
+      buttonLink: 'products?category=Tecnología&subcategory=SmartHouse',
       secondaryButtonText: 'Ver Condiciones',
       secondaryButtonLink: '#',
       image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/banner_mobile_1.png',
@@ -77,12 +77,7 @@ export const Hero = () => {
                   >
                     {slide.buttonText}
                   </a>
-                  <a
-                    href={slide.secondaryButtonLink}
-                    className="inline-flex items-center justify-center px-4 sm:px-5 py-2 sm:py-3 text-sm sm:text-base font-medium text-center text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg mx-3"
-                  >
-                    {slide.secondaryButtonText}
-                  </a>
+                  
                 </div>
               </div>
             </section>
