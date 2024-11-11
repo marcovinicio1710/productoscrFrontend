@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
-import Logo2 from "../../assets/logo2.png";
 import { Search } from "../Sections/Search";//done
 import { SearchPC } from "../Sections/SearchPC";//done
 import { DropdownLoggedOut } from "../Elements/DropdownLoggedOut";//done

@@ -33,7 +33,7 @@ export async function getProductList(category, subcategory, query, marcas, order
 export async function getProduct(id){
     const response = await fetch(`${process.env.REACT_APP_HOST}/api/productos/${id}/`);
     if(!response.ok){
-        throw { message: response.statusText, status: response.status };
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
     const data = await response.json()
     
@@ -44,7 +44,7 @@ export async function getFeaturedList() {
     
     const response = await fetch(`${process.env.REACT_APP_HOST}/api/productos/ofertas-dia/`);
     if (!response.ok) {
-        throw { message: response.statusText, status: response.status };
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
     const data = await response.json();
     
@@ -54,7 +54,7 @@ export async function getFeaturedList() {
 export async function getBestSellersList () {
     const response = await fetch(`${process.env.REACT_APP_HOST}/api/productos/best-sellers/`);
     if (!response.ok) {
-        throw { message: response.statusText, status: response.status };
+        throw new Error(`Error ${response.status}: ${response.statusText}`);
     }
     const data = await response.json();
     
@@ -64,7 +64,7 @@ export async function getBestSellersList () {
 export async function RecienLlegadosList () {
   const response = await fetch(`${process.env.REACT_APP_HOST}/api/productos/recien-llegado/`);
   if (!response.ok) {
-      throw { message: response.statusText, status: response.status };
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
   }
   const data = await response.json();
   

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { toast } from "react-toastify";
 import { useTitle } from "../../hooks/useTitle";
 import { getUserOrders } from "../../services";
@@ -17,31 +17,29 @@ export const DashboardPage = () => {
 
   useTitle("Mis Ordenes");
 
-  useEffect(() => {
-    fetchOrders(`${process.env.REACT_APP_HOST}/api/ordenes-historial/?page_size=5`);
-  }, []);
-
-  const fetchOrders = async (url) => {
+  // Memoizar fetchOrders usando useCallback para evitar que cambie en cada renderizado
+  const fetchOrders = useCallback(async (url) => {
     try {
-      
       const data = await getUserOrders(url);
-      console.log(data)
+      console.log(data);
       setOrders(data.results || []);
       setTotalEntries(data.count || 0);
-
-      // Extraer y guardar los links de las siguientes páginas
       setNextPageUrl(data.next);
       setPrevPageUrl(data.previous);
 
-      // Actualizar `currentPage` a partir de la URL `next` o `previous`
+      // Extraer el número de página de la URL
       const currentPageNumber = extractPageNumber(url);
       setCurrentPage(currentPageNumber);
-
     } catch (error) {
       setOrders([]);
       toast.error(error.message, { closeButton: true, position: "bottom-center" });
     }
-  };
+  }, []);
+
+  // useEffect para cargar las órdenes al iniciar
+  useEffect(() => {
+    fetchOrders(`${process.env.REACT_APP_HOST}/api/ordenes-historial/?page_size=5`);
+  }, [fetchOrders]);
 
   // Función para extraer el número de página de una URL
   const extractPageNumber = (url) => {

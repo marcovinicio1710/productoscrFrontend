@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useCart } from "../../../context";
-import { useNavigate } from "react-router-dom";
 import { getUserAddresses, createAddress, createOrder } from "../../../services";
 import { useLoadScript } from "@react-google-maps/api";//
 import { AddressList } from "./components/AddressList";//
@@ -37,7 +36,6 @@ export const Checkout = () => {
   const [orderConfirmed, setOrderConfirmed] = useState(false);
   const [orderDetails, setOrderDetails] = useState(null);
   const [showSpinner, setShowSpinner] = useState(false);
-  const navigate = useNavigate();
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -173,7 +171,7 @@ export const Checkout = () => {
         <>
           {orderConfirmed ? (
             <div className="text-center p-6 bg-gradient-to-b from-green-500 dark:bg-green-800 rounded-lg h-100">
-              <h2 className="text-9xl font-bold text-white dark:text-white mb-4 bi bi-bag-check"></h2>
+              <h2 className="text-9xl font-bold text-white dark:text-white mb-4 "><i className="bi bi-bag-check"> </i></h2>
               <h2 className="text-2xl font-bold text-green-800 dark:text-white mb-4">¡Pedido Confirmado!</h2>
               <p className="text-lg dark:text-white">Número de Orden: <Link to={`/orders/${orderDetails?.numero_orden}`} className="text-blue-600 dark:text-blue-400 hover:underline font-semibold"> {orderDetails?.numero_orden}</Link> </p>
               

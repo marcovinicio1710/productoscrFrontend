@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { OpinionesModal } from './OpinionesModal'; 
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export  const ProductFeatures = ({ product }) => {
   const [activeTab, setActiveTab] = useState("Características");
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 

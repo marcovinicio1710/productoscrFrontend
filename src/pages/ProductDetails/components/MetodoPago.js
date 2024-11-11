@@ -10,20 +10,7 @@ const itemVariants = {
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } }
 };
  
-const listVariants = {
-    open: {
-      transition: {
-        staggerChildren: 0.1, // Controla el retraso entre cada hijo
-        delayChildren: 0.2    // Añade un retraso inicial antes de mostrar el primer hijo
-      }
-    },
-    closed: {
-      transition: {
-        staggerChildren: 0.05, // Puede ser diferente en el cierre
-        staggerDirection: -1   // Invertir la dirección del escalonado (cierran en orden inverso)
-      }
-    }
-  };
+
 export const MetodoPago = ({ precio }) => {
   const [isOpen, setIsOpen] = useState(false);
 
