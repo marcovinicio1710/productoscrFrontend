@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -9,88 +10,86 @@ export const Footer = () => {
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Sobre ProductosCR.com</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">¿Quiénes Somos?</a>
+                <Link to="/" className="hover:underline">¿Quiénes Somos?</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Preguntas Frecuentes</a>
+                <Link to="/" className="hover:underline">Preguntas Frecuentes</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Formas de Pago</a>
+                <Link to="/" className="hover:underline">Formas de Pago</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Envíos y Tarifas</a>
+                <Link to="/" className="hover:underline">Envíos y Tarifas</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">¿Cómo Comprar?</a>
+                <Link to="/" className="hover:underline">¿Cómo Comprar?</Link>
               </li>
-              
             </ul>
           </div>
-          
+
           <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
-            <li className="mb-4">
-                <a href="#" className="hover:underline">Términos de Uso</a>
+              <li className="mb-4">
+                <Link to="/" className="hover:underline">Términos de Uso</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Privacidad</a>
+                <Link to="/" className="hover:underline">Privacidad</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Devoluciones & Garantías</a>
+                <Link to="/" className="hover:underline">Devoluciones & Garantías</Link>
               </li>
             </ul>
           </div>
+
           <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Vender con ProductosCR.com</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">Informacion</a>
+                <Link to="/" className="hover:underline">Información</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">Crece tu negocio</a>
+                <Link to="/" className="hover:underline">Crece tu negocio</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline">¿Porque vender con nosotros?</a>
+                <Link to="/" className="hover:underline">¿Por qué vender con nosotros?</Link>
               </li>
-              
             </ul>
           </div>
+
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contactanos</h2>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contáctanos</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a href="#" className="hover:underline">Lunes a Viernes de 7am a 7pm y Sábado de 7am a 3pm.</a>
+                <Link to="/" className="hover:underline">Lunes a Viernes de 7am a 7pm y Sábado de 7am a 3pm.</Link>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline"><span className="font-semibold">Whatsapp:</span> xxxx-xxxx </a>
+                <a href="https://wa.me/xxxxxx" className="hover:underline">
+                  <span className="font-semibold">Whatsapp:</span> xxxx-xxxx
+                </a>
               </li>
               <li className="mb-4">
-                <a href="#" className="hover:underline"><span className="font-semibold">Correo:</span> hola@productoscr.com </a>
+                <a href="mailto:hola@productoscr.com" className="hover:underline">
+                  <span className="font-semibold">Correo:</span> hola@productoscr.com
+                </a>
               </li>
-              
             </ul>
           </div>
         </div>
         <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between text-center">
           <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-            © 2024 <a href="https://flowbite.com/">ProductosCR™</a>. Todos los Derechos Reservados.
+            © 2024 <Link to="/">ProductosCR™</Link>. Todos los Derechos Reservados.
           </span>
           <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse justify-center">
-            <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white bi bi-facebook">
-              
+            <a href="https://facebook.com" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
               <span className="sr-only">Facebook</span>
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white bi bi-instagram">
-              
+            <a href="https://instagram.com" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white bi bi-whatsapp">
-              
+            <a href="https://wa.me/50660671710" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
               <span className="sr-only">Whatsapp</span>
             </a>
-            
-            
           </div>
         </div>
       </div>
