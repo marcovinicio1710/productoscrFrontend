@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { HomePage, ProductsListPage, OrderDetailPage ,ProductDetail, Login, Register, CartPage2, Checkout,  OrderPage, DashboardPage, ResetPasswordPage, PageNotFound , ChangePasswordPage } from "../pages";
 import { ProtectedRoute } from "./ProtectedRoute";
+import { GiftWrappingInfo } from "../info_pages";
 
 export const AllRoutes = () => {
   return (
@@ -22,6 +23,7 @@ export const AllRoutes = () => {
         <Route path="order-summary" element={<ProtectedRoute><OrderPage /></ProtectedRoute>} />
         <Route path="orders" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
         <Route path="orders/:asin" element={<ProtectedRoute><OrderDetailPage /></ProtectedRoute>} />
+        <Route path="info-regalos" element={<GiftWrappingInfo />} />
 
 
         <Route path="*" element={<PageNotFound />} />

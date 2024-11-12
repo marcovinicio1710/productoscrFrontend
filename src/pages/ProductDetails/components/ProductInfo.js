@@ -1,5 +1,6 @@
 import { Rating } from "../../../components";
 
+
 export const ProductInfo = ({ product }) => {
     // Dividimos la descripción en puntos usando el salto de línea "\r\n" como delimitador.
     console.log(product)
@@ -58,7 +59,10 @@ export const ProductInfo = ({ product }) => {
             {product.regalo_apply && (
                 <div className="flex items-center mb-4 text-red-500 dark:text-amber-400 ">
                      <span className="bi bi-gift-fill text-base ">  </span>
-                     <span className="ml-2 mr-8 text-sm font-bold">  Aplica para Regalo  </span>
+                     <span className="ml-2 mr-4 text-sm font-bold">  Aplica para Regalo  </span>
+                     <a href="/info-regalos" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs font-medium underline" >
+                        Ver términos
+                    </a>
                     
                 
                 </div>

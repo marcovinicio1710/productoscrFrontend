@@ -6,7 +6,7 @@ export const Hero = () => {
   const slides = [
     {
       title: 'Feria de SmartHome este mes hasta 40% descuento ',
-      description: 'Ofertas en productos de inteligentes para su hogar.',
+      description: 'Ofertas en todos los productos de inteligentes para su hogar.',
       buttonText: 'Ver productos',
       buttonLink: 'products?category=Tecnología&subcategory=SmartHouse',
       secondaryButtonText: 'Ver Productos',
@@ -14,13 +14,22 @@ export const Hero = () => {
       image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+1+main.jpg',
     },
     {
-      title: 'Feria Gaming este weekend 50% de descuento',
-      description: 'Aprovecha todos los productos gaming a mitad de precio.',
+      title: 'Descuento en Amazon Echo buds este mes de inaguracion',
+      description: 'Aprovecha todos los productos de Echo buds a un excelente precio de inaguracion.',
       buttonText: 'Ver Productos',
       buttonLink: 'products?category=Tecnología&subcategory=SmartHouse',
       secondaryButtonText: 'Ver Condiciones',
       secondaryButtonLink: '#',
-      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/banner_mobile_1.png',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+2++main+(1).webp',
+    },
+    {
+      title: '¡Envolvemos tus compras para toda ocasion!',
+      description: 'Verifica los detalles del producto si aplican a enviar como regalo.',
+      buttonText: 'Ver Terminos',
+      buttonLink: 'info-regalos',
+      secondaryButtonText: 'Ver Condiciones',
+      secondaryButtonLink: '#',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+3++main.webp',
     }
   ];
 
@@ -56,7 +65,14 @@ export const Hero = () => {
                 
                 {/* Imágenes que se muestran primero solo en pantallas pequeñas */}
                 <div className="flex mt-6 lg:mt-0 lg:col-span-5 sm:order-1 lg:order-2">
-                  <img className="rounded-lg w-full sm:hero-image py-2" src={slide.image} alt="mockup" />
+                  {/* Imagen */}
+                  <div className="flex justify-center items-center overflow-hidden rounded-lg">
+                    <img
+                      className="w-full h-auto object-cover"
+                      src={slide.image}
+                      alt="mockup"
+                    />
+                  </div>
 
 
                 </div>

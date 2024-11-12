@@ -20,8 +20,8 @@ export const OfertasImages = () => {
   const ofertas = [
     {
       title: 'Aprovecha las ofertas de productoscr en lavadoras',
-      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/nevera.jpg',
-      imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/nevera2.jpg',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/2000x700+hoime.jpg',
+      imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/home+700x630.jpg',
     },
     {
       title: 'Aprovecha las ofertas de productoscr en Cámaras de Seguridad',
