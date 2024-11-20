@@ -24,14 +24,14 @@ export const OfertasImages = () => {
       imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/home+700x630.jpg',
     },
     {
-      title: 'Aprovecha las ofertas de productoscr en Cámaras de Seguridad',
-      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/ofertasIMAGES2.png',
-      imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/ofertasIMAGES2-SM.png',
+      title: 'Aprovecha las ofertas de productoscr en Regalia de Bombilla TP-Link',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/home+pequenas+screen+laptop.jpg',
+      imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/home+pequenas+smartphone.jpg',
     },
     {
-      title: 'Aprovecha las ofertas de productoscr en Cámaras de Seguridad',
-      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/ofertasIMAGES3.jpg',
-      imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/ofertasIMAGES3-SM.jpg',
+      title: 'Aprovecha las ofertas de productoscr en Altavoces de Kareoke Costa Rica',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/home+pequenas+screen+lapto_1.jpg',
+      imagesm: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/home+pequenas+smartphone_1.jpg',
     }
   ];
 
