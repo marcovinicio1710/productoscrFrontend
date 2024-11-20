@@ -8,7 +8,7 @@ const categorias = [
   },
   {
     nombre: "Hogar",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/hogar.webp",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/info_imagenes/hogar+(2).webp",
   },
   {
     nombre: "Regalos",
@@ -16,27 +16,27 @@ const categorias = [
   },
   {
     nombre: "Juguetes",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/Juguetes.webp",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/info_imagenes/categoria_ninos.webp",
   },
   {
     nombre: "Ropa",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/Ropa.webp",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/info_imagenes/categoria_ropa.webp",
   },
   {
-    nombre: "Accesorios",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/collares.webp",
+    nombre: "Belleza",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/info_imagenes/categoria_belleza.webp",
   },
   {
-    nombre: "Gaming",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/gaming.webp",
+    nombre: "Audifonos",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/Imganes+Productos/amazondus-blanco1.webp",
   },
   {
     nombre: "Macostas",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/Mascotas.webp",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/info_imagenes/categoria_gatos.webp",
   },
   {
     nombre: "SmartHome",
-    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/categorias/SmartHome.webp",
+    imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/Imganes+Productos/Amazon_Echo_Show_5_(3.%C2%AA_generaci%C3%B3n)__Pantalla_inteligente_con_2x_bajo_y_sonido_claro__Blanco_glaciar_imagen_1.webp",
   },
   {
     nombre: "Cocina",

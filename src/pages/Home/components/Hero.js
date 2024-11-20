@@ -4,6 +4,16 @@ export const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
+    
+    {
+      title: '¡Envolvemos tus compras para toda ocasion!',
+      description: 'Verifica los detalles del producto si aplican a enviar como regalo.',
+      buttonText: 'Ver Terminos',
+      buttonLink: 'info-regalos',
+      secondaryButtonText: 'Ver Condiciones',
+      secondaryButtonLink: '#',
+      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+3++main.webp',
+    },
     {
       title: 'Feria de SmartHome este mes hasta 40% descuento ',
       description: 'Ofertas en todos los productos de inteligentes para su hogar.',
@@ -21,15 +31,6 @@ export const Hero = () => {
       secondaryButtonText: 'Ver Condiciones',
       secondaryButtonLink: '#',
       image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+2++main+(1).webp',
-    },
-    {
-      title: '¡Envolvemos tus compras para toda ocasion!',
-      description: 'Verifica los detalles del producto si aplican a enviar como regalo.',
-      buttonText: 'Ver Terminos',
-      buttonLink: 'info-regalos',
-      secondaryButtonText: 'Ver Condiciones',
-      secondaryButtonLink: '#',
-      image: 'https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/fondo+3++main.webp',
     }
   ];
 
