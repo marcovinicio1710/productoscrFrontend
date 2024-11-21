@@ -15,6 +15,7 @@ export const CartProvider = ({ children }) => {
     try {
       setLoading(true);
       const response = await getCartAPI();
+      console.log(response,'response context')
       setCartList(response.carrito.items);
       setTotal(response.total);
     } catch (error) {
@@ -29,21 +30,21 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   // Agregar un producto al carrito
-  const addToCart = async (productId, quantity) => {
+  const addToCart = async (productId, quantity, talla = null) => {
     try {
-      const updatedCart = await addToCartAPI(productId, quantity);
+      const updatedCart = await addToCartAPI(productId, quantity, talla); // Pasar la talla al servicio
       setCartList(updatedCart.items);
       setTotal(updatedCart.total);
     } catch (error) {
       console.error("Error al agregar al carrito:", error);
     }
-  };
+ };
 
   // Actualizar la cantidad de un producto en el carrito
-  const updateCartItem = async (productId, quantity) => {
+  const updateCartItem = async (productId, quantity , talla = null) => {
     try {
-      const updatedCart = await updateCartItemAPI(productId, quantity);
-      
+      const updatedCart = await updateCartItemAPI(productId, quantity , talla);
+      console.log(updatedCart,'update')
       setCartList(updatedCart.carrito.items);
       setTotal(updatedCart.total);
     } catch (error) {

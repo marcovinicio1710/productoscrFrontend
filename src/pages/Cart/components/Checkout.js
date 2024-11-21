@@ -120,7 +120,8 @@ export const Checkout = () => {
           es_regalo: item.regalo_apply,
           precio_regalo: item.regalo_apply ? item.precio_regalo : 0,
           tamano_regalo: item.regalo_apply ? item.Tamano_Regalo : 'NO_APLICA',
-          motivo_regalo: item.regalo_apply ? item.Motivo_Regalo : 'NO_APLICA', 
+          motivo_regalo: item.regalo_apply ? item.Motivo_Regalo : 'NO_APLICA',
+          talla: item.talla !== 'NO_APLICA' ? item.talla : null, 
 
         })),
         precio_total: total + shippingCost,

@@ -12,6 +12,7 @@ import Pagination from "./components/Pagination";
 export const ProductsListPage = () => {
   const { products, initialProductList } = useFilter();
   const [categorias, setCategorias] = useState([]);
+  const [tallas, setTallas] = useState([]);
   const [subcategorias, setSubcategorias] = useState([]);
   const [marcas, setMarcas] = useState([]);
   const [priceRanges, setPriceRanges] = useState([]); // Añadir priceRanges en el estado
@@ -29,6 +30,7 @@ export const ProductsListPage = () => {
   const category = searchParams.get("category") ? searchParams.get("category").split(",") : [];
   const subcategory = searchParams.get("subcategory") ? searchParams.get("subcategory").split(",") : [];
   const marcasQuery = searchParams.get("marca") ? searchParams.get("marca").split(",") : [];
+  const talla = searchParams.get("talla") ? searchParams.get("talla").split(",") : [];
   const query = searchParams.get("q") || null;
   const priceRangeQuery = searchParams.get("priceRange") ? searchParams.get("priceRange").split(",") : [];
   const ordering = searchParams.get("ordering") || "mas_vendido";
@@ -52,6 +54,7 @@ export const ProductsListPage = () => {
     category: category,
     subcategory: subcategory,
     marca: marcasQuery,
+    talla: talla,
     priceRange: priceRangeQuery,
   });
 
@@ -65,12 +68,14 @@ export const ProductsListPage = () => {
         setSubcategorias([]);
         setMarcas([]);
         setPriceRanges([]);
+        setTallas([]);
 
         const data = await getProductList(
           category.length > 0 ? category : null,
           subcategory.length > 0 ? subcategory : null,
           query ? query : null,
           marcasQuery.length > 0 ? marcasQuery : null,
+          talla.length > 0 ? talla : null,
           ordering,
           selectedFilters.priceRange.length > 0 ? selectedFilters.priceRange : null,
           page 
@@ -90,6 +95,7 @@ export const ProductsListPage = () => {
         setSubcategorias(data.subcategorias || []);
         setMarcas(data.marcas || []);
         setPriceRanges(data.rangos_precio || []);
+        setTallas(data.tallas || []);
 
       } catch (error) {
         toast.error("Error al obtener productos.", { closeButton: true, position: "bottom-center" });
@@ -102,6 +108,7 @@ export const ProductsListPage = () => {
     subcategory.join(),
     query,
     marcasQuery.join(),
+    talla.join(),
     ordering,
     selectedFilters.priceRange.join(),
     page
@@ -136,6 +143,9 @@ export const ProductsListPage = () => {
     }
     if (selectedSort.value) {
       params.append('ordering', selectedSort.value);
+    }
+    if (selectedFilters.talla.length > 0) {
+      params.append('talla', selectedFilters.talla.join(','));
     }
 
     navigate(`/products?${params.toString()}`);
@@ -172,6 +182,7 @@ export const ProductsListPage = () => {
             categorias={categorias}
             subcategorias={subcategorias}
             marcas={marcas}
+            tallas={tallas}
             priceRanges={priceRanges}
             selectedFilters={selectedFilters}
             onFilterChange={handleFilterChange}

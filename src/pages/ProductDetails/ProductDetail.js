@@ -12,6 +12,7 @@ import { MotioFees } from "./components/MotioFees";//
 import { MetodoPago } from "./components/MetodoPago";//
 import { ProductFeatures } from "./components/ProductFeatures";//
 import { PreguntasyRespuesta } from "./components/PreguntasyRespuesta";//
+import { TallaQuantitySelector } from "./components/TallaQuantitySelector";
 
 
 export const ProductDetail = () => {
@@ -19,6 +20,7 @@ export const ProductDetail = () => {
    
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState(1);
+    const [selectedTalla, setSelectedTalla] = useState(null); 
   
 
     useEffect(() => {
@@ -55,11 +57,26 @@ export const ProductDetail = () => {
                     
                     {/* Agrupar el selector de cantidad y el botón de agregar al carrito */}
                     <div className="flex items-center space-x-4 "> {/* Flex para alinear en fila, espacio entre elementos */}
-                        <QuantitySelector quantity={quantity} setQuantity={setQuantity} stock={product.stock} />
+                    {product.bool_talla ? (
+                        <TallaQuantitySelector 
+                            product={product} 
+                            selectedTalla={selectedTalla} 
+                            setSelectedTalla={setSelectedTalla}
+                            quantity={quantity} 
+                            setQuantity={setQuantity} 
+                        />
+                    ) : (
+                        <QuantitySelector 
+                            quantity={quantity} 
+                            setQuantity={setQuantity} 
+                            stock={product.stock} 
+                        />
+                    )}
                         <AddToCartButton 
                           
                             product={product} 
                             quantity={quantity} 
+                            selectedTalla={selectedTalla}
                            
                         />
                     </div>

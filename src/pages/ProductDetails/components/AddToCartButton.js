@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../../../context";
 
-export const AddToCartButton = ({ product, quantity }) => {
+export const AddToCartButton = ({ product, quantity, selectedTalla }) => {
     const navigate = useNavigate();
     const { fetchCart } = useCart(); 
 
@@ -17,7 +17,7 @@ export const AddToCartButton = ({ product, quantity }) => {
 
         try {
             // Llama al servicio para agregar al carrito
-            const response = await addToCartAPI(product.id, quantity);
+            const response = await addToCartAPI(product.id, quantity, selectedTalla);
             await fetchCart(); 
 
             toast.success(response.message);

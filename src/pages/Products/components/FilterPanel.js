@@ -6,6 +6,7 @@ export const FilterPanel = ({
   categorias,
   subcategorias,
   marcas,
+  tallas,
   priceRanges,
   selectedFilters,
   onFilterChange,
@@ -66,6 +67,7 @@ export const FilterPanel = ({
           {[{ name: 'Categorías', options: categorias, type: 'category' },
             { name: 'Subcategorías', options: subcategorias, type: 'subcategory' },
             { name: 'Marcas', options: marcas, type: 'marca' },
+            { name: 'Tallas', options: tallas, type: 'talla' },
             { name: 'Rango de Precio', options: priceRanges, type: 'priceRange' }].map((section, idx) => (
             <div key={idx}>
               {renderFilterSection(section)}

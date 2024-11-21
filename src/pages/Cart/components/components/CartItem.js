@@ -44,10 +44,17 @@ export const CartItem = ({ item, updateCartItem, updateCartGiftOptions, removeFr
             {item.producto_nombre}
           </h2>
         </Link>
+        {/* Mostrar la talla si aplica */}
+        {item.talla !== "NO_APLICA" && (
+          <p className="mt-1 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+            Talla: <span className="font-semibold">{item.talla}</span>
+          </p>
+        )}
         <div className="flex items-center mt-2 space-x-2">
+
           {/* Botón para disminuir la cantidad */}
           <button
-            onClick={() => updateCartItem(item.producto, item.cantidad - 1)}
+            onClick={() => updateCartItem(item.producto, item.cantidad - 1, item.talla)}
             disabled={item.cantidad === 1}
             className={`px-3 h-6 sm:px-4 ${item.cantidad === 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-gray-200 hover:bg-gray-300'} 
                         dark:bg-gray-600 dark:hover:bg-gray-500 rounded-lg dark:text-white text-xs sm:text-sm`}
@@ -65,7 +72,7 @@ export const CartItem = ({ item, updateCartItem, updateCartGiftOptions, removeFr
 
           {/* Botón para aumentar la cantidad */}
           <button
-            onClick={() => updateCartItem(item.producto, item.cantidad + 1)}
+            onClick={() => updateCartItem(item.producto, item.cantidad + 1, item.talla)}
             className="px-3 h-6 sm:px-4 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 rounded-lg dark:text-white text-xs sm:text-sm"
           >
             +

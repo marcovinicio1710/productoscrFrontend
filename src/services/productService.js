@@ -1,7 +1,7 @@
 import {fetchWithAuth} from "./authService";
 
 
-export async function getProductList(category, subcategory, query, marcas, ordering, priceRange, page = null) {
+export async function getProductList(category, subcategory, query, marcas,talla, ordering, priceRange, page = null) {
     try {
       let url = `${process.env.REACT_APP_HOST}/api/productos-filtrados/?`;
   
@@ -9,6 +9,7 @@ export async function getProductList(category, subcategory, query, marcas, order
       if (category) params.push(`category=${category}`);
       if (subcategory) params.push(`subcategory=${subcategory}`);
       if (marcas) params.push(`marca=${marcas}`);
+      if (talla) params.push(`talla=${talla}`);
       if (query) params.push(`q=${query}`);
       if (ordering) params.push(`ordering=${ordering}`);
       if (priceRange) params.push(`priceRange=${priceRange}`);
@@ -76,7 +77,7 @@ export async function RecienLlegadosList () {
 
 // services/index.js
 
-export async function addToCartAPI(productId, quantity) {
+export async function addToCartAPI(productId, quantity , talla) {
     try {
         const response = await fetchWithAuth(`${process.env.REACT_APP_HOST}/api/carrito/`, {
             method: 'POST',
@@ -86,7 +87,8 @@ export async function addToCartAPI(productId, quantity) {
             },
             body: JSON.stringify({
                 producto_id: productId,
-                cantidad: quantity
+                cantidad: quantity,
+                talla: talla
             })
         });
 
@@ -191,7 +193,7 @@ export async function addRatingAPI(productId, rating, comment) {
 }
 
 
-export async function updateCartItemAPI(productId, quantity) {
+export async function updateCartItemAPI(productId, quantity , talla = null) {
     try {
       const response = await fetchWithAuth(`${process.env.REACT_APP_HOST}/api/carrito/${productId}/`, {
         method: 'PUT',
@@ -199,7 +201,11 @@ export async function updateCartItemAPI(productId, quantity) {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
-        body: JSON.stringify({ cantidad: quantity })
+        body: JSON.stringify(
+          talla && talla !== "NO_APLICA"
+            ? { cantidad: quantity, talla: talla }
+            : { cantidad: quantity }
+        )
       });
   
       if (!response.ok) {
