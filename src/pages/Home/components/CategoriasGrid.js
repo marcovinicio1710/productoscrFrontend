@@ -63,31 +63,29 @@ export const CategoriasGrid = () => {
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {categorias.map((categoria, index) => (
-          <div key={index} >
-            <Link
-                key={index}
-                to={`/products?category=${categoria.page}`}
-                className="relative group mx-auto"
+          <div key={index} className="relative group mx-auto">
+          {/* Imagen de la categoría */}
+          <Link to={`/products?category=${categoria.page}`}>
+            <img
+              src={categoria.imagen}
+              alt={categoria.nombre}
+              className="w-28 h-28 sm:w-36 sm:h-36 md:w-full md:h-full object-cover rounded-xl md:rounded-3xl shadow-lg mx-auto"
+            />
+            {/* Fondo negro con opacidad al hacer hover */}
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-xl md:rounded-3xl"></div>
+            {/* Nombre de la categoría */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span
+                className="text-white text-sm sm:text-lg md:text-xl font-semibold"
+                style={{
+                  textShadow: "0px 0px 2px black, 0px 0px 5px black",
+                }}
               >
-                {/* Imagen de la categoría con bordes redondeados */}
-                <img
-                  src={categoria.imagen}
-                  alt={categoria.nombre}
-                  className="w-28 h-28 sm:w-36 sm:h-36 md:w-full md:h-full object-cover rounded-xl md:rounded-3xl shadow-lg mx-auto"
-                />
-                {/* Fondo negro con opacidad al hacer hover */}
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 rounded-xl md:rounded-3xl"></div>
-                {/* Nombre de la categoría con borde dorado */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span
-                    className="text-white text-sm md:text-xl font-semibold"
-                    style={{ textShadow: "0px 0px 2px black, 0px 0px 5px black" }}
-                  >
-                    {categoria.nombre}
-                  </span>
-                </div>
-            </Link>
+                {categoria.nombre}
+              </span>
             </div>
+          </Link>
+        </div>
         ))}
       </div>
     </section>
