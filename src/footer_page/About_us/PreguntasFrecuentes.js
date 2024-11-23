@@ -1,6 +1,8 @@
 import { Accordion } from "./Accordion";
+import { useTitle } from "../../hooks/useTitle";
 
-export const Faq = () => {
+export const PreguntasFrecuentes = () => {
+useTitle("Preguntas Frecuentes");
   const faqs = [
     {
       id: 1,
@@ -40,7 +42,7 @@ export const Faq = () => {
   ];
 
   return (
-    <section className="my-10 p-7 border rounded dark:border-slate-700 shadow-sm">
+    <section className="container mx-auto px-4 py-16">
       <h1 className="text-2xl text-center font-semibold dark:text-slate-100 mb-3 underline underline-offset-8">
         Preguntas Frecuentes
       </h1>

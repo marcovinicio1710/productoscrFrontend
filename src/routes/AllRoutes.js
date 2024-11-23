@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { HomePage, ProductsListPage, OrderDetailPage ,ProductDetail, Login, Register, CartPage2, Checkout,  OrderPage, DashboardPage, ResetPasswordPage, PageNotFound , ChangePasswordPage } from "../pages";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { GiftWrappingInfo } from "../info_pages";
+import { About_us , PreguntasFrecuentes, FormasDePago , Envios_Tarifas , ComoComprar, TerminosYCondiciones, PoliticaDePrivacidad , DevolucionesYGarantias} from "../footer_page";
 
 export const AllRoutes = () => {
   return (
@@ -24,6 +25,14 @@ export const AllRoutes = () => {
         <Route path="orders" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
         <Route path="orders/:asin" element={<ProtectedRoute><OrderDetailPage /></ProtectedRoute>} />
         <Route path="info-regalos" element={<GiftWrappingInfo />} />
+        <Route path="quienes-somos" element={<About_us />} />
+        <Route path="Preguntas-Frecuentes" element={<PreguntasFrecuentes />} />
+        <Route path="Formas-De-Pago" element={<FormasDePago />} />
+        <Route path="Envios-Tarifas" element={<Envios_Tarifas />} />
+        <Route path="Como-Comprar" element={<ComoComprar />} />
+        <Route path="Terminos-Y-Condiciones" element={<TerminosYCondiciones />} />
+        <Route path="Politica-De-Privacidad" element={<PoliticaDePrivacidad />} />
+        <Route path="Devoluciones-Y-Garantias" element={<DevolucionesYGarantias />} />
 
 
         <Route path="*" element={<PageNotFound />} />

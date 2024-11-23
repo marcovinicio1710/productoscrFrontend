@@ -24,9 +24,9 @@ const categorias = [
     page: "Niños"
   },
   {
-    nombre: "Ropa",
+    nombre: "Moda",
     imagen: "https://heron3.s3.us-east-2.amazonaws.com/productos_cr/info_imagenes/categoria_ropa.webp",
-    page: "Ropa"
+    page: "Moda"
   },
   {
     nombre: "Belleza",

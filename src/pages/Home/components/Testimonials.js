@@ -10,9 +10,9 @@ export const Testimonials = () => {
               <p className="my-4 font-light">"ProductosCR tiene una gran variedad de productos y el servicio al cliente es impecable. ¡Siempre encuentro lo que necesito!"</p>
             </blockquote>
             <figcaption className="flex justify-center items-center space-x-3">
-              <img className="w-9 h-9 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&q=50" alt="user" />
+              <img className="w-9 h-9 rounded-full" src="https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/Testimonials/323657933_144843981687460_7462745038641226343_n.jpg" alt="user" />
               <div className="space-y-0.5 font-medium dark:text-white text-left">
-                <div>Carlos Ramírez</div>
+                <div>Natalia Jimenez</div>
                 <div className="text-sm font-light text-gray-500 dark:text-gray-400">Comprador frecuente</div>
               </div>
             </figcaption>    
@@ -24,10 +24,10 @@ export const Testimonials = () => {
               <p className="my-4 font-light">"La entrega siempre llega a tiempo, y los productos son de excelente calidad. Recomiendo totalmente comprar en ProductosCR."</p>
             </blockquote>
             <figcaption className="flex justify-center items-center space-x-3">
-              <img className="w-9 h-9 rounded-full" src="https://images.unsplash.com/photo-1525085475165-c6808cdb005e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&q=50" alt="user" />
+              <img className="w-9 h-9 rounded-full" src="https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/Testimonials/12269724_437589896440516_1713147068_a.jpg" alt="user" />
               <div className="space-y-0.5 font-medium dark:text-white text-left">
-                <div>María Fernández</div>
-                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Diseñadora gráfica</div>
+                <div>Andre Weky</div>
+                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Comprador frecuente</div>
               </div>
             </figcaption>    
           </figure>
@@ -38,10 +38,10 @@ export const Testimonials = () => {
               <p className="my-4 font-light">"Cada compra que he hecho ha superado mis expectativas. La calidad de los productos es excepcional y los precios son muy competitivos."</p>
             </blockquote>
             <figcaption className="flex justify-center items-center space-x-3">
-              <img className="w-9 h-9 rounded-full" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&q=60" alt="user" />
+              <img className="w-9 h-9 rounded-full" src="https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/Testimonials/323657933_144843981687460_7462745038641226343_n33.jpg" alt="user" />
               <div className="space-y-0.5 font-medium dark:text-white text-left">
-                <div>José Martínez</div>
-                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Ingeniero de software</div>
+                <div>Diana Vega</div>
+                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Comprador frecuente</div>
               </div>
             </figcaption>    
           </figure>
@@ -52,10 +52,10 @@ export const Testimonials = () => {
               <p className="my-4 font-light">"El equipo de soporte siempre está dispuesto a ayudar, y hacen que todo el proceso de compra sea muy fácil y rápido."</p>
             </blockquote>
             <figcaption className="flex justify-center items-center space-x-3">
-              <img className="w-9 h-9 rounded-full" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=120&q=60" alt="user" />
+              <img className="w-9 h-9 rounded-full" src="https://heron3.s3.us-east-2.amazonaws.com/productos_cr/HOME/Testimonials/323657933_144843981687460_7462745038641226343_n2%60.jpg" alt="user" />
               <div className="space-y-0.5 font-medium dark:text-white text-left">
-                <div>Pablo Pérez</div>
-                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Gerente de proyectos</div>
+                <div>Reina Castro</div>
+                <div className="text-sm font-light text-gray-500 dark:text-gray-400">Comprador Nuevo</div>
               </div>
             </figcaption>    
           </figure>

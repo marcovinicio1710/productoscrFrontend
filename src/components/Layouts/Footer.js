@@ -10,19 +10,19 @@ export const Footer = () => {
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Sobre ProductosCR.com</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <Link to="/" className="hover:underline">¿Quiénes Somos?</Link>
+                <Link to="quienes-somos" className="hover:underline">¿Quiénes Somos?</Link>
               </li>
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Preguntas Frecuentes</Link>
+                <Link to="Preguntas-Frecuentes" className="hover:underline">Preguntas Frecuentes</Link>
               </li>
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Formas de Pago</Link>
+                <Link to="Formas-De-Pago" className="hover:underline">Formas de Pago</Link>
               </li>
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Envíos y Tarifas</Link>
+                <Link to="Envios-Tarifas" className="hover:underline">Envíos y Tarifas</Link>
               </li>
               <li className="mb-4">
-                <Link to="/" className="hover:underline">¿Cómo Comprar?</Link>
+                <Link to="Como-Comprar" className="hover:underline">¿Cómo Comprar?</Link>
               </li>
             </ul>
           </div>
@@ -31,46 +31,49 @@ export const Footer = () => {
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Términos de Uso</Link>
+                <Link to="Terminos-Y-Condiciones" className="hover:underline">Términos de Uso</Link>
               </li>
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Privacidad</Link>
+                <Link to="Politica-De-Privacidad" className="hover:underline">Privacidad</Link>
               </li>
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Devoluciones & Garantías</Link>
+                <Link to="Devoluciones-Y-Garantias" className="hover:underline">Devoluciones & Garantías</Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Vender con ProductosCR.com</h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
-              <li className="mb-4">
-                <Link to="/" className="hover:underline">Información</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/" className="hover:underline">Crece tu negocio</Link>
-              </li>
-              <li className="mb-4">
-                <Link to="/" className="hover:underline">¿Por qué vender con nosotros?</Link>
-              </li>
-            </ul>
-          </div>
+          {/* 
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Vender con ProductosCR.com</h2>
+              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                <li className="mb-4">
+                  <Link to="/" className="hover:underline">Información</Link>
+                </li>
+                <li className="mb-4">
+                  <Link to="/" className="hover:underline">Crece tu negocio</Link>
+                </li>
+                <li className="mb-4">
+                  <Link to="/" className="hover:underline">¿Por qué vender con nosotros?</Link>
+                </li>
+              </ul>
+            </div>
+            */}
+
 
           <div>
             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contáctanos</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <Link to="/" className="hover:underline">Lunes a Viernes de 7am a 7pm y Sábado de 7am a 3pm.</Link>
+                <Link to="/" className="hover:underline">Lunes a Viernes de 9am a 7pm y Sábado de 9am a 4pm.</Link>
               </li>
               <li className="mb-4">
-                <a href="https://wa.me/xxxxxx" className="hover:underline">
-                  <span className="font-semibold">Whatsapp:</span> xxxx-xxxx
+                <a href="https://wa.me/50660671710" className="hover:underline">
+                  <span className="font-semibold">Whatsapp:</span> 6067-1710
                 </a>
               </li>
               <li className="mb-4">
-                <a href="mailto:hola@productoscr.com" className="hover:underline">
-                  <span className="font-semibold">Correo:</span> hola@productoscr.com
+                <a href="mailto:info-sells@productoscr.com" className="hover:underline">
+                  <span className="font-semibold">Correo:</span> info-sells@productoscr.com
                 </a>
               </li>
             </ul>

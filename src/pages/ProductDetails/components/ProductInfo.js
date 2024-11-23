@@ -3,7 +3,7 @@ import { Rating } from "../../../components";
 
 export const ProductInfo = ({ product }) => {
     // Dividimos la descripción en puntos usando el salto de línea "\r\n" como delimitador.
-    console.log(product)
+    
     const descriptionPoints = product.descripcion ? product.descripcion.split("\r\n") : [];
     
     // Función para formatear el precio con separadores de miles y decimales elevados
