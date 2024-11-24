@@ -59,7 +59,7 @@ export const ProductsListPage = () => {
   });
 
   const navigate = useNavigate();
-  useTitle("Explora Productos");
+  useTitle(query ? `Resultados para "${query}"` : "Explora Productos");
 
   useEffect(() => {
     const fetchProducts = async () => {
