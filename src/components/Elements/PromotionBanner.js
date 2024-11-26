@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 export const PromotionBanner = () => {
     const promotions = [
-        "🇨🇷 Más de 1.000 productos en stock disponibles ahora", // Primera promoción con la bandera de Costa Rica
+        "🇨🇷 Más de 70 productos en stock disponibles ahora", // Primera promoción con la bandera de Costa Rica
         "🚚 Envío gratis en órdenes mayores a ₡35.000", // Segunda promoción con el símbolo de colones
-        "🎁 ₡1.500 de descuento en tu primera compra", // Tercera promoción
-        "📞 Atención al cliente vía WhatsApp +506 6067-1710" // Atención al cliente WhatsApp
+        "🎁 Envolvemos tus pedidos en regalos", // Tercera promoción
+        "📞 Atención al cliente vía WhatsApp +506 6067-1710",
+        "🚚 ContraEntrega en pedidos >= ₡17.000" // Atención al cliente WhatsApp
       ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,7 +25,7 @@ export const PromotionBanner = () => {
       {/* Lado Izquierdo: Información Estática (oculto en pantallas pequeñas) */}
       <div className="hidden md:flex items-center space-x-2">
         <span className="bi bi-telephone-fill"></span>
-        <span>(+506) 1234-5678</span>
+        <span>(+506) 6067-1710</span>
       </div>
 
       {/* Centro: Carousel de Texto que cambia cada 3 segundos */}

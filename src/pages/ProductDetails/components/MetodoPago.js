@@ -93,20 +93,22 @@ export const MetodoPago = ({ precio }) => {
                             <span className="ml-2 mr-8">  Transferecias Bancarias</span>
                         </span>
                   </motion.li>
-                  <motion.li variants={itemVariants}> {/* Usando itemVariants */}
+                 
+                  <motion.li variants={itemVariants}> 
                         <span className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             
                             <span className="bi bi-credit-card-fill text-xl">  </span>
-                            <span className="ml-2 mr-8">  Tarjetas de Credito </span>
+                            <span className="ml-2 mr-8">  Tarjetas de Debito/Credito  </span>
                         </span>
                   </motion.li>
-                  <motion.li variants={itemVariants}> {/* Usando itemVariants */}
+                   {/* Usando itemVariants 
+                  <motion.li variants={itemVariants}> {/* Usando itemVariants 
                         <span className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                             
                             <span className="bi bi-paypal text-xl">  </span>
                             <span className="ml-2 mr-8">  Paypal </span>
                         </span>
-                  </motion.li>
+                  </motion.li>*/}
                 </motion.ul>
               </motion.div>
             
